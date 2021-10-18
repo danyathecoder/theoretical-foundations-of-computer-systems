@@ -7,7 +7,7 @@ class Logic:
     port = serial.Serial()
     def __init__(self, debug_handler, out_handler) -> None:
         errors = 0
-        port_interfaces = ('com_interface1', 'com_interface2')
+        port_interfaces = ('COM1', 'COM2')
         self.debug_handler, self.out_handler = debug_handler, out_handler
         for i in port_interfaces:
             try:
@@ -23,7 +23,7 @@ class Logic:
 
 
     def close(self):
-        if self.port.isOpen == True:
+        if self.port.isOpen() == True:
             self.port.close()
 
     def read(self):

@@ -13,8 +13,7 @@ class GUI:
     header_font = ("Times New Roman", 14)
     label_font = ("Times New Roman", 12)
     deafult_baudrate = 9600
-    uart_baudrates = [50, 75, 110, 134, 150, 200, 300, 600, 1200, 1800, 2400,
-                      4800, 9600, 19200, 38400, 57600, 115200]
+    uart_baudrates = [110, 150, 300, 600, 1200, 2400, 4800, 9600, 19200, 38400, 57600, 115200]
 
     def __init__(self, master) -> None:
 
@@ -78,6 +77,9 @@ class GUI:
     def _close_handler(self):
         self.backend.close()
         self.master.destroy()
+
+
+
 
     def _input_handler(self, event):
         if event.widget.edit_modified() == 0:

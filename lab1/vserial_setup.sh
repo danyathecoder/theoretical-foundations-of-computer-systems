@@ -1,1 +1,0 @@
-socat -d -d pty,raw,echo=0,link=com_interface1 pty,raw,echo=0,link=com_interface2
